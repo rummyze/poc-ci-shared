@@ -67,6 +67,9 @@ class Shared implements Serializable{
     }
 
     def downloadHelloService (version) {
+        def s = APP_VERSIONS
+        def m = s =~ /(\d).(\d).(\d)/
+        def APP_VERSION = m[0][0]
         download("com.boxfuse.samples", "hello", version, "war", "deploy/hello.war")
     }
 
