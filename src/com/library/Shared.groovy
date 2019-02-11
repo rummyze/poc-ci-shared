@@ -78,6 +78,9 @@ class Shared implements Serializable{
         deploy(env,"service-1")
     }
 
-
+    def getversion(version) {
+        def m = version =~ /(\d).(\d).(\d)/
+        return  m[0][0]
+    }
 
 }
