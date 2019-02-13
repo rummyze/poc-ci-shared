@@ -71,7 +71,7 @@ class Shared implements Serializable{
     }
 
     def downloadHelloService1 (version) {
-        download("net.eisele", "play-rest", version, "war", "deploy/world.war")
+        download("net.eisele", "play-rest", version, "jar", "deploy/world.jar")
     }
     
     def deploy(env,service){
