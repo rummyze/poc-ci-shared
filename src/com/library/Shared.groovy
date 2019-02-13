@@ -70,6 +70,10 @@ class Shared implements Serializable{
         download("com.boxfuse.samples", "hello", version, "war", "deploy/hello.war")
     }
 
+    def downloadHelloService1 (version) {
+        download("com.boxfuse.samples", "world", version, "war", "deploy/world.war")
+    }
+    
     def deploy(env,service){
         mvn("install -Pweblogic,${env},${service}")
     }
