@@ -82,7 +82,7 @@ class Shared implements Serializable{
         deploy(env,"service-1")
     }
 
-    def deployHelloService(env){
+    def deployHelloService1(env){
         deploy(env,"service-2")
     }
 
