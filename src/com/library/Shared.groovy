@@ -70,9 +70,14 @@ class Shared implements Serializable{
         download("com.boxfuse.samples", "hello", version, "war", "deploy/hello.war")
     }
 
-    def downloadHelloService1 (version) {
-        download("net.eisele", "play-rest", version, "jar", "deploy/world.jar")
+    
+    def downloadWorldService (version) {
+        download("com.boxfuse.samples", "world", version, "war", "deploy/world.war")
     }
+
+    // def downloadHelloService1 (version) {
+    //     download("net.eisele", "play-rest", version, "jar", "deploy/world.jar")
+    // }
     
     def deploy(env,service){
         mvn("install -Pweblogic,${env},${service}")
@@ -82,7 +87,7 @@ class Shared implements Serializable{
         deploy(env,"service-1")
     }
 
-    def deployHelloService1(env){
+    def deployWorldService(env){
         deploy(env,"service-2")
     }
 
